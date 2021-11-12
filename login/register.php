@@ -25,7 +25,7 @@ if (strlen($_POST['password']) > 20 || strlen($_POST['password']) < 5) {
 }
 
 // We need to check if the account with that username exists.
-if ($stmt = $mysqli->prepare('SELECT id, password FROM accounts WHERE username = ?')) {
+if ($stmt = $mysqli->prepare('SELECT id, password FROM personen WHERE username = ?')) {
     // Bind parameters (s = string, i = int, b = blob, etc), hash the password using the PHP password_hash function.
     $stmt->bind_param('s', $_POST['username']);
     $stmt->execute();
@@ -36,15 +36,15 @@ if ($stmt = $mysqli->prepare('SELECT id, password FROM accounts WHERE username =
         echo 'Username exists, please choose another!';
     } else {
         // Username doesnt exists, insert new account
-        if ($stmt = $mysqli->prepare('INSERT INTO accounts (username, password, email, activation_code) VALUES (?, ?, ?, ?)')) {
+        if ($stmt = $mysqli->prepare('INSERT INTO personen (password, email, activation_code) VALUES (?, ?, ?, ?)')) {
             // We do not want to expose passwords in our database, so hash the password and use password_verify when a user logs in.
             $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 //            $stmt->bind_param('sss', $_POST['username'], $password, $_POST['email']);
             $uniqid = uniqid();
-            $stmt->bind_param('ssss', $_POST['username'], $password, $_POST['email'], $uniqid);
+            $stmt->bind_param('sss', $password, $_POST['email'], $uniqid);
             $stmt->execute();
 //            echo 'You have successfully registered, you can now login!';
-            $from    = 'noreply@yourdomain.com';
+            $from    = 'activatie@abtf.nl';
             $subject = 'Account Activation Required';
             $headers = 'From: ' . $from . "\r\n" . 'Reply-To: ' . $from . "\r\n" . 'X-Mailer: PHP/' . phpversion() . "\r\n" . 'MIME-Version: 1.0' . "\r\n" . 'Content-Type: text/html; charset=UTF-8' . "\r\n";
             // Update the activation variable below
