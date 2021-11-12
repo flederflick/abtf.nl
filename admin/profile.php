@@ -31,16 +31,20 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/db_connect.php';
         <p>Your account details are below:</p>
         <table>
             <tr>
-                <td>Username:</td>
-                <td><?=$_SESSION['name']?></td>
+                <td>Spelersnummer:</td>
+                <td><?=$_SESSION['spelersnummer']?></td>
             </tr>
             <tr>
-                <td>Password:</td>
-                <td><?=$password?></td>
+                <td>Roepnaam:</td>
+                <td><?=$_SESSION['roepnaam']?></td>
+            </tr>
+            <tr>
+                <td>Achternaam:</td>
+                <td><?=$_SESSION['achternaam']?></td>
             </tr>
             <tr>
                 <td>Email:</td>
-                <td><?=$email?></td>
+                <td><?=$_SESSION['email']?></td>
             </tr>
         </table>
     </div>
