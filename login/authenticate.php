@@ -10,7 +10,7 @@ if ( !isset($_POST['username'], $_POST['password']) ) {
 }
 
 // Prepare our SQL, preparing the SQL statement will prevent SQL injection.
-if ($stmt = $mysqli->prepare('SELECT id, password, roepnaam, achternaam FROM personen WHERE email = ?')) {
+if ($stmt = $mysqli->prepare('SELECT id, password, spelersnummer, roepnaam, achternaam FROM personen WHERE email = ?')) {
     // Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
     $stmt->bind_param('s', $_POST['username']);
     $stmt->execute();
@@ -18,7 +18,7 @@ if ($stmt = $mysqli->prepare('SELECT id, password, roepnaam, achternaam FROM per
     $stmt->store_result();
 
     if ($stmt->num_rows > 0) {
-        $stmt->bind_result($id, $password, $roepnaam, $achternaam);
+        $stmt->bind_result($id, $password, $spelersnummer, $roepnaam, $achternaam);
         $stmt->fetch();
         // Account exists, now we verify the password.
         // Note: remember to use password_hash in your registration file to store the hashed passwords.

@@ -28,7 +28,7 @@
 					<li><a href="/index.php#contact">Contact</a></li>
 					<?php
                         if (!isset($_SESSION['loggedin'])) {
-                            echo '<li><a href="/login/index.html">Login</a></li>';
+                            echo '<li><a href="/login/index.php">Login</a></li>';
                         }else{
                             echo '<li><a href="/admin/home.php">Beheer</a></li>';
                         }
