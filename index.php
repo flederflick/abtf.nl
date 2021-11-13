@@ -336,11 +336,11 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/includes/header.php";
                     <div class="row">
                         <div class="col-md-9">
                             <ul class="social">
-                                <li><a href="http://www.facebook.com" target="_blank"><i
+                                <li><a href="https://www.facebook.com" target="_blank"><i
                                             class="icon-facebook icon-social"></i> Facebook</a></li>
-                                <li><a href="http://www.twitter.com" target="_blank"><i
+                                <li><a href="https://www.twitter.com" target="_blank"><i
                                             class="icon-twitter icon-social"></i> Twitter</a></li>
-                                <li><a href="http://www.youtube.com" target="_blank"><i
+                                <li><a href="https://www.youtube.com" target="_blank"><i
                                             class="icon-youtube icon-social"></i> Youtube</a></li>
                             </ul>
                         </div>

@@ -51,7 +51,7 @@ if (isset($mysqli)) {
             if ($setsplayed == 0) {
                 $percentage = 0;
             } else {
-                $percentage = round(($setswon / $setsplayed) * 100, 0);
+                $percentage = round(($setswon / $setsplayed) * 100);
             }
 
             $persoonscore = array("spelersnaam" => $spelersnaam, "teamnaam" => $teamnaam, "setsgespeeld" => $setsplayed, "setsgewonnen" => $setswon, "winpercentage" => $percentage);

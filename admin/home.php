@@ -9,7 +9,7 @@ if (!isset($_SESSION['loggedin'])) {
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="nl">
 <head>
     <meta charset="utf-8">
     <title>Home Page</title>

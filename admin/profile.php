@@ -10,7 +10,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/db_connect.php';
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="nl">
 <head>
     <meta charset="utf-8">
     <title>Profile Page</title>
