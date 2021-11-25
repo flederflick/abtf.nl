@@ -33,7 +33,7 @@ if ($stmt = $mysqli->prepare('SELECT id, password, spelersnummer, roepnaam, acht
             $_SESSION['spelersnummer'] = $spelersnummer;
             $_SESSION['roepnaam'] = $roepnaam;
             $_SESSION['achternaam'] = $achternaam;
-            header('Location: ../admin/profile.php');
+            header('Location: ../portal/index.php');
         } else {
             // Incorrect password
             echo 'Incorrect username and/or password!';

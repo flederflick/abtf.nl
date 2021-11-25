@@ -30,7 +30,7 @@
                         if (!isset($_SESSION['loggedin'])) {
                             echo '<li><a href="/login/index.php">Login</a></li>';
                         }else{
-                            echo '<li><a href="/admin/home.php">Beheer</a></li>';
+                            echo '<li><a href="/portal/index.php">Beheer</a></li>';
                         }
                     ?>
 				</ul>
