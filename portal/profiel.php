@@ -60,7 +60,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/portal/inc-head.php";
             <!-- Begin Page Content -->
             <div class="container-fluid">
 
-                <h1 class="h3 mb-4 text-gray-800">Mijn Account</h1>
+                <h1 class="h3 mb-4 text-gray-800">Mijn Profiel</h1>
                 <div class="status alert alert-success" style="display: none"></div>
 
                 <div class="container-md float-left">
@@ -95,11 +95,8 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/portal/inc-head.php";
                         </div>
                         <div class="row form-group">
                             <div class="col-sm-4">
-                                <div class="input-group date" id="geboortedatum">
-                                    <input type="text" class="form-control" placeholder="Geboortedatum" id="gdat" name="gdat">
-                                    <span class="input-group-addon">
-                                <span class="glyphicon glyphicon-calendar"></span>
-                            </span>
+                                <div class="input-group date" id="geboortedatumdiv">
+                                    <input type="text" id="geboortedatum" class="form-control" name="gdat">
                                 </div>
                             </div>
                         </div>
@@ -133,31 +130,31 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/portal/inc-head.php";
                             </div>
                         </div>
 
-                        <legend>Spelersinformatie</legend>
-                        <div class="row form-group">
-                            <div class="col-sm-2">
-                                <label>Spelersnummer </label>
-                            </div>
-                            <div class="col-sm-4">
-                                <input class="form-control" name="spelersnummer" id="spelersnummer" disabled>
-                            </div>
-                        </div>
-                        <div class="row form-group">
-                            <div class="col-sm-2">
-                                <label>Team </label>
-                            </div>
-                            <div class="col-sm-4">
-                                <input class="form-control" name="team" id="team" disabled>
-                            </div>
-                        </div>
-                        <div class="row form-group">
-                            <div class="col-sm-2">
-                                <label>Type speler </label>
-                            </div>
-                            <div class="col-sm-4">
-                                <input class="form-control" name="typespeler" id="typespeler" disabled>
-                            </div>
-                        </div>
+<!--                        <legend>Spelersinformatie</legend>-->
+<!--                        <div class="row form-group">-->
+<!--                            <div class="col-sm-2">-->
+<!--                                <label>Spelersnummer </label>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-4">-->
+<!--                                <input class="form-control" name="spelersnummer" id="spelersnummer" disabled>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="row form-group">-->
+<!--                            <div class="col-sm-2">-->
+<!--                                <label>Team </label>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-4">-->
+<!--                                <input class="form-control" name="team" id="team" disabled>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="row form-group">-->
+<!--                            <div class="col-sm-2">-->
+<!--                                <label>Type speler </label>-->
+<!--                            </div>-->
+<!--                            <div class="col-sm-4">-->
+<!--                                <input class="form-control" name="typespeler" id="typespeler" disabled>-->
+<!--                            </div>-->
+<!--                        </div>-->
 
                         <div class="row form-group">
                             <div class="col-sm-2">
@@ -173,125 +170,6 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/portal/inc-head.php";
                         </div>
                     </form>
                 </div>
-                <!--                <form class="form-group-lg" id="addperson_form" role="form" method="post" name="addperson_form"-->
-                <!--                      action="mijnaccount-submit.php">-->
-                <!---->
-                <!--                    <div class="col-5">-->
-                <!--                                        <input type="text" class="form-control" name="roepnaam" id="roepnaam"-->
-                <!--                                               placeholder="Roepnaam"-->
-                <!--                                               required>-->
-                <!--                    </div>-->
-                <!--                    <div class="col-5">-->
-                <!--                        <input type="text" class="form-control" name="voorletters" id="voorletters"-->
-                <!--                               placeholder="Voorletters" required>-->
-                <!--                    </div>-->
-                <!--                    <div class="col-sm-2">-->
-                <!--                        <input type="text" class="form-control" name="tussenvoegsels" id="tussenvoegsels"-->
-                <!--                               placeholder="Tussenvoegsels">-->
-                <!--                    </div>-->
-                <!--                    <div class="col-sm-6">-->
-                <!--                        <input type="text" class="form-control" name="achternaam" id="achternaam"-->
-                <!--                               placeholder="Achternaam" required>-->
-                <!--                    </div>-->
-                <!---->
-                <!--                    <div class="col-sm-2">-->
-                <!--                        <label class="radio-inline">-->
-                <!--                            <input type="radio" name="geslacht" id="man" value="M" required> Man-->
-                <!--                        </label>-->
-                <!--                        <label class="radio-inline">-->
-                <!--                            <input type="radio" name="geslacht" id="vrouw" value="V" required> Vrouw-->
-                <!--                        </label>-->
-                <!--                    </div>-->
-                <!---->
-                <!---->
-                <!--                    <div class="col-sm-4">-->
-                <!--                        <div class="input-group date" id='geboortedatum'>-->
-                <!--                            <input type='text' class='form-control' placeholder='Geboortedatum' id='gdat'-->
-                <!--                                   name='gdat'/>-->
-                <!--                            <span class='input-group-addon'>-->
-                <!--                                <span class='glyphicon glyphicon-calendar'></span>-->
-                <!--                            </span>-->
-                <!--                        </div>-->
-                <!--                    </div>-->
-                <!---->
-                <!--                    <legend>Adres informatie</legend>-->
-                <!---->
-                <!--                    <div class="col-sm-4">-->
-                <!--                        <input type="text" class="form-control" name="straatnaam" id="straatnaam"-->
-                <!--                               placeholder="Straatnaam">-->
-                <!--                    </div>-->
-                <!--                    <div class="col-sm-2">-->
-                <!--                        <input type="number" class="form-control" name="huisnummer" id="nummer"-->
-                <!--                               placeholder="Nummer">-->
-                <!--                    </div>-->
-                <!--                    <div class="col-sm-2">-->
-                <!--                        <input type="text" class="form-control" name="achtervoegsels" id="achtervoegsels"-->
-                <!--                               placeholder="Achtervoegsels">-->
-                <!--                    </div>-->
-                <!--                    <div class="col-sm-4">-->
-                <!--                        <input type="text" class="form-control" name="postcode" id="postcode"-->
-                <!--                               placeholder="Postcode">-->
-                <!--                    </div>-->
-                <!--                    <div class="col-sm-4">-->
-                <!--                        <input type="text" class="form-control" name="woonplaats" id="woonplaats"-->
-                <!--                               placeholder="Woonplaats">-->
-                <!--                    </div>-->
-                <!---->
-                <!--                    <legend>Contact Informatie</legend>-->
-                <!--                    <div class="col-sm-4">-->
-                <!--                        <input type="tel" class="form-control" name="telefoonnummer" id="telefoonnummer"-->
-                <!--                               placeholder="Telefoonnummer">-->
-                <!--                    </div>-->
-                <!--                    <div class="col-sm-4">-->
-                <!--                        <input type="email" class="form-control" name="email" id="email" placeholder="Email"-->
-                <!--                               required>-->
-                <!--                    </div>-->
-                <!---->
-                <!---->
-                <!--                    <legend>Spelersinformatie</legend>-->
-                <!--                    <div class="col-sm-2">-->
-                <!--                        <label>Spelersnummer </label>-->
-                <!--                    </div>-->
-                <!--                    <div class="col-sm-4">-->
-                <!--                        <input class="form-control" name="spelersnummer" id="spelersnummer" disabled>-->
-                <!--                    </div>-->
-                <!---->
-                <!--                    <div class="col-sm-2">-->
-                <!--                        <label>Team </label>-->
-                <!--                    </div>-->
-                <!--                    <div class="col-sm-4">-->
-                <!--                        <input class="form-control" name="team" id="team" disabled>-->
-                <!--                    </div>-->
-                <!---->
-                <!--                    <div class="col-sm-2">-->
-                <!--                        <label>Type speler </label>-->
-                <!--                    </div>-->
-                <!--                    <div class="col-sm-4">-->
-                <!--                        <input class="form-control" name="typespeler" id="typespeler" disabled>-->
-                <!--                    </div>-->
-                <!---->
-                <!---->
-                <!--                    <div class="form-group">-->
-                <!--                        <div class="col-sm-2">-->
-                <!--                            <button type="submit" class="btn btn-warning" name="submitchange" id="submitchange">-->
-                <!--                                Aanpassen-->
-                <!--                            </button>-->
-                <!--                        </div>-->
-                <!--                        <div class="col-sm-2">-->
-                <!--                            <button type="reset" class="btn btn-danger"-->
-                <!--                                    onClick="location.href='/admin/mijnaccount.php'"-->
-                <!--                                    value="reset">Reset-->
-                <!--                            </button>-->
-                <!--                        </div>-->
-                <!--                        <div class="col-sm-12">-->
-                <!--                            <i><b style="color: #C9302C;">Wijzigingen worden ook verzonden naar de penningmeester en-->
-                <!--                                    secretaris van ABTF</b></i>-->
-                <!--                        </div>-->
-                <!---->
-                <!--                    </div>-->
-                <!--                </form>-->
-
-
             </div>
             <!-- /.container-fluid -->
 
@@ -313,17 +191,31 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/portal/inc-head.php";
     <i class="fas fa-angle-up"></i>
 </a>
 
+
+<!-- Bootstrap core JavaScript-->
+<script type="text/javascript" src="/portal/vendor/jquery/jquery.min.js"></script>
+<script src="/portal/vendor/jqueryui/jquery-ui.js"></script>
+<script src="/js/jquery.ui.datepicker-nl.js"></script>
+<script src="/js/moment.js"></script>
+<script type="text/javascript" src="/portal/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Core plugin JavaScript-->
+<script type="text/javascript" src="/portal/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for all pages-->
+<script type="text/javascript" src="js/sb-admin-2.min.js"></script>
+
+
 <script type="text/javascript">
     $(document).ready(function () {
-        //initiate geboortedatum datetimepicker
-        $('#geboortedatum').datetimepicker({
-            locale: 'nl',
-            format: 'YYYY-MM-DD',
-            useCurrent: false //Important! See issue #1075
-        });
 
-
+        // Fadeout Message div is present
         $("#message").delay(1000).fadeOut();
+
+        $('#geboortedatum').datepicker({
+            changeMonth: true,
+            changeYear: true
+        });
 
         $.ajax({
             type: 'POST',
@@ -342,18 +234,17 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/portal/inc-head.php";
                     $('#woonplaats').val(value.woonplaats);
                     $('#telefoonnummer').val(value.telefoon);
                     $('#email').val(value.email);
-                    $('#spelersnummer').val(value.spelersnummer);
-                    $('#team').val(value.naam + " " + value.teamnummer);
-                    $('#typespeler').val(value.type_omschrijving);
+                    // $('#spelersnummer').val(value.spelersnummer);
+                    // $('#team').val(value.naam + " " + value.teamnummer);
+                    // $('#typespeler').val(value.type_omschrijving);
                     if (value.geslacht === "M") {
                         $('#man').prop('checked', true);
                     } else if (value.geslacht === 'V') {
                         $('#vrouw').prop('checked', true);
                     }
 
-                    var newDate = moment(value.geboortedatum, "YYYY-MM-DD"); // Can be a moment object, JS date object or a  valid date string
-                    $('#geboortedatum').data("DateTimePicker").date(newDate);
-
+                    var date = new Date(moment(value.geboortedatum, "YYYY-MM-DD"));
+                    $("#geboortedatum").datepicker('setDate', date);
                 });
             },
             error: function (xhr, ajaxOptions, thrownError) {
@@ -362,10 +253,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/portal/inc-head.php";
             complete: function () {
             }
         });
-
-
     });
 </script>
 </body>
-
 </html>

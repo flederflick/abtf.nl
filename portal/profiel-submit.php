@@ -8,6 +8,14 @@ if (!isset($_SESSION['loggedin'])) {
     exit;
 }
 
+//$format = 'd/m/Y';
+//$date =  $_POST['geboortedatum'];
+//
+//$date = date_create_from_format($format, $date);
+//echo date_format($date, 'Y-m-d');
+//
+//exit();
+
 $data = array();
 
 $persoonid = $_SESSION['id'];
@@ -105,7 +113,13 @@ if (isset($_POST['gdat']) and $data['geboortedatum'] != $_POST['gdat']) {
     if ($data['geboortedatum'] !== null and $_POST['gdat'] == '') {
         $query .= $comma . 'geboortedatum' . " = NULL";
     } else {
-        $query .= $comma . 'geboortedatum' . " = '" . mysqli_real_escape_string($mysqli, trim($_POST['gdat'])) . "'";
+        $format = 'd/m/Y';
+        $date =  $_POST['gdat'];
+
+        $date = date_create_from_format($format, $date);
+        $geboortedatum = date_format($date, 'Y-m-d');
+
+        $query .= $comma . 'geboortedatum' . " = '" . mysqli_real_escape_string($mysqli, trim($geboortedatum)) . "'";
     }
 
     $comma = ", ";
