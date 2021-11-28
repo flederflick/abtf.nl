@@ -24,7 +24,9 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/portal/inc-head.php";
 <!-- Page Wrapper -->
 <div id="wrapper">
 
-    <?php include_once $_SERVER['DOCUMENT_ROOT'] . "/portal/inc-menu.php"; ?>
+    <?php
+    include_once $_SERVER['DOCUMENT_ROOT'] . "/portal/inc-menu.php";
+    ?>
 
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
@@ -54,11 +56,10 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/portal/inc-head.php";
                 </div>
             <?php endif; ?>
 
+
             <!-- Begin Page Content -->
             <div class="container-fluid">
 
-                <!-- Page Heading -->
-                <h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
 
             </div>
             <!-- /.container-fluid -->
@@ -66,7 +67,9 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/portal/inc-head.php";
         </div>
         <!-- End of Main Content -->
 
-        <?php include_once $_SERVER['DOCUMENT_ROOT'] . "/portal/inc-footer.php"; ?>
+        <?php
+        include_once $_SERVER['DOCUMENT_ROOT'] . "/portal/inc-footer.php";
+        ?>
 
     </div>
     <!-- End of Content Wrapper -->
@@ -79,36 +82,29 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/portal/inc-head.php";
     <i class="fas fa-angle-up"></i>
 </a>
 
-<!-- Logout Modal-->
-<!--    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"-->
-<!--        aria-hidden="true">-->
-<!--        <div class="modal-dialog" role="document">-->
-<!--            <div class="modal-content">-->
-<!--                <div class="modal-header">-->
-<!--                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>-->
-<!--                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">-->
-<!--                        <span aria-hidden="true">×</span>-->
-<!--                    </button>-->
-<!--                </div>-->
-<!--                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>-->
-<!--                <div class="modal-footer">-->
-<!--                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>-->
-<!--                    <a class="btn btn-primary" href="login.html">Logout</a>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
 
 <!-- Bootstrap core JavaScript-->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="/portal/vendor/jquery/jquery.min.js"></script>
+<script src="/portal/vendor/jqueryui/jquery-ui.js"></script>
+<script src="/js/jquery.ui.datepicker-nl.js"></script>
+<script src="/js/moment.js"></script>
+<script type="text/javascript" src="/portal/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <!-- Core plugin JavaScript-->
-<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<script type="text/javascript" src="/portal/vendor/jquery-easing/jquery.easing.min.js"></script>
 
 <!-- Custom scripts for all pages-->
-<script src="js/sb-admin-2.min.js"></script>
+<script type="text/javascript" src="js/sb-admin-2.min.js"></script>
 
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        // Fadeout Message div is present
+        $("#message").delay(1000).fadeOut();
+
+
+    });
+</script>
 </body>
-
 </html>
